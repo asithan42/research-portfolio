@@ -36,18 +36,27 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Optimizing Nitrogen Fertilizer Application in Paddies</h1>
-                    <p>Using Machine Learning for Leaf Colour Detection to enhance rice farming sustainability</p>
-                    <a href="research.html" class="btn">Explore Our Research</a>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/images/research/rice-field.jpg" alt="Rice field with healthy plants">
-                </div>
+      <section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Optimizing Nitrogen Fertilizer Application in Paddies</h1>
+            <p>Using Machine Learning for Leaf Colour Detection to enhance rice farming sustainability</p>
+            <a href="research.html" class="btn">Explore Our Research</a>
+        </div>
+        <div class="hero-image carousel">
+            <div class="carousel-track">
+                <img src="../assets/images/3.jpg" class="carousel-img" alt="Slide 1">
+                <img src="../assets/images/2.jpg" class="carousel-img" alt="Slide 2">
+                <img src="../assets/images/12.jpg" class="carousel-img" alt="Slide 3">
+                <img src="../assets/images/3.jpg" class="carousel-img" alt="Slide 1">
+                <img src="../assets/images/2.jpg" class="carousel-img" alt="Slide 2">
+                <img src="../assets/images/12.jpg" class="carousel-img" alt="Slide 3">
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Key Features -->
         <section class="features">
@@ -103,5 +112,32 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+   <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-img');
+  const slideWidth = slides[0].clientWidth;
+  let index = 0;
+
+  function moveSlide() {
+    index++;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    if (index === slides.length - 2) { // near end, reset soon
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = 0;
+        track.style.transform = `translateX(0px)`;
+      }, 600); // wait for animation to finish
+    }
+  }
+
+  setInterval(moveSlide, 3000);
+</script>
+
+
+   
+
+
 </body>
 </html>
