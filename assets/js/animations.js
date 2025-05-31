@@ -57,18 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navList = document.querySelector('nav ul');
-    
-    if (mobileMenu && navList) {
-        mobileMenu.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navList.classList.toggle('show');
-        });
-    }
-});
+
 
 // result page animation
 
