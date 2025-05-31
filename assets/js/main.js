@@ -52,3 +52,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scroll down -> hide header
+        header.style.top = "-200px"; // Adjust if your header is taller
+    } else {
+        // Scroll up -> show header
+        header.style.top = "0";
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll
+});
