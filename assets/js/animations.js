@@ -58,3 +58,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+// result page animation
+
+  
+  function animateCountUp(el, target, suffix = '%', duration = 2000) {
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.floor(progress * target);
+      el.textContent = value + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  // Use IntersectionObserver to trigger animation when visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'));
+        const isSeconds = el.textContent.includes('s');
+        const suffix = isSeconds ? 's' : '%';
+
+        animateCountUp(el, target, suffix);
+        observer.unobserve(el); // only run once
+      }
+    });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll('.metric-value').forEach(el => {
+    observer.observe(el);
+  });
+
+

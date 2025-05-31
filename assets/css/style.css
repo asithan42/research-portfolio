@@ -948,3 +948,31 @@ footer {
   border-radius: 8px;
   overflow: hidden;
 }
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+
+
+
+
