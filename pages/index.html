@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <header>
@@ -44,62 +45,53 @@
 </header>
 
     <main>
-      <!-- Hero Section -->
+        <!-- Hero Section -->
       <section class="hero">
-        <div class="container">
-          <div class="hero-content">
+    <div class="container">
+        <div class="hero-content">
             <h1>Optimizing Nitrogen Fertilizer Application in Paddies</h1>
-            <p>
-              Using Machine Learning for Leaf Colour Detection to enhance rice
-              farming sustainability
-            </p>
+            <p>Using Machine Learning for Leaf Colour Detection to enhance rice farming sustainability</p>
             <a href="research.html" class="btn">Explore Our Research</a>
-          </div>
-          <div class="hero-image">
-            <img
-              src="../assets/images/research/rice_field.jpg"
-              alt="Rice field with healthy plants"
-            />
-          </div>
         </div>
-      </section>
+        <div class="hero-image carousel">
+            <div class="carousel-track">
+                <img src="../assets/images/3.jpg" class="carousel-img" alt="Slide 1">
+                <img src="../assets/images/2.jpg" class="carousel-img" alt="Slide 2">
+                <img src="../assets/images/12.jpg" class="carousel-img" alt="Slide 3">
+                <img src="../assets/images/3.jpg" class="carousel-img" alt="Slide 1">
+                <img src="../assets/images/2.jpg" class="carousel-img" alt="Slide 2">
+                <img src="../assets/images/12.jpg" class="carousel-img" alt="Slide 3">
+            </div>
+        </div>
+    </div>
+</section>
 
-      <!-- Key Features -->
-      <section class="features">
-        <div class="container">
-          <h2>Key Innovations</h2>
-          <div class="features-grid">
-            <div class="feature-card">
-              <img src="assets/images/icons/ai-icon.svg" alt="AI Icon" />
-              <h3>98% Accuracy</h3>
-              <p>
-                Our DenseNet121 model achieves unprecedented accuracy in
-                nitrogen deficiency classification.
-              </p>
+
+
+        <!-- Key Features -->
+        <section class="features">
+            <div class="container">
+                <h2>Key Innovations</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="../assets/images/ai-icon.png" alt="AI Icon">
+                        <h3>98% Accuracy</h3>
+                        <p>Our DenseNet121 model achieves unprecedented accuracy in nitrogen deficiency classification.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="../assets/images/mobile-icon.png" alt="Mobile Icon">
+                        <h3>Mobile Optimization</h3>
+                        <p>Works on low-end smartphones with just 2GB RAM, processing in under 2 seconds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="../assets/images/eco-icon.png" alt="Eco Icon">
+                        <h3>Sustainable Impact</h3>
+                        <p>Reduces fertilizer overuse by 15% compared to traditional methods.</p>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-              <img
-                src="assets/images/icons/mobile-icon.svg"
-                alt="Mobile Icon"
-              />
-              <h3>Mobile Optimization</h3>
-              <p>
-                Works on low-end smartphones with just 2GB RAM, processing in
-                under 2 seconds.
-              </p>
-            </div>
-            <div class="feature-card">
-              <img src="assets/images/icons/eco-icon.svg" alt="Eco Icon" />
-              <h3>Sustainable Impact</h3>
-              <p>
-                Reduces fertilizer overuse by 15% compared to traditional
-                methods.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+    </main> 
 
     <footer>
       <div class="container">
@@ -135,7 +127,7 @@
                 alt="University Logo"
                 style="
                   width: 80px;
-                  height: 40;
+                  height: auto;
                   vertical-align: middle;
                   margin-right: 8px;
                 "
@@ -147,6 +139,12 @@
                <p><strong>Email:</strong> info@sjp.ac.lk<br>
                 <strong>Phone:</strong> +94 11 2801024</p>
             </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
         </div>
         <div class="copyright">
@@ -159,5 +157,33 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
-  </body>
+    <script src="../assets/js/animation.js"></script>
+   <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-img');
+  const slideWidth = slides[0].clientWidth;
+  let index = 0;
+
+  function moveSlide() {
+    index++;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    if (index === slides.length - 2) { // near end, reset soon
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = 0;
+        track.style.transform = `translateX(0px)`;
+      }, 600); // wait for animation to finish
+    }
+  }
+
+  setInterval(moveSlide, 3000);
+</script>
+
+
+   
+
+
+</body>
 </html>

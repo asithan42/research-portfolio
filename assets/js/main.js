@@ -48,7 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Run once on page load
+
+    
 });
+
+
 
 let lastScrollTop = 0;
 const header = document.querySelector('header');
