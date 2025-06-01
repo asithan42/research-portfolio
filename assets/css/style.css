@@ -774,7 +774,7 @@ footer {
 }
 
 .conclusion-text h3 {
-  margin: 25px 0 15px;
+  margin: 1px 0 15px;
   color: var(--primary-color);
 }
 
@@ -971,8 +971,92 @@ footer {
     object-fit: cover;
 }
 
+/* Splash Screen Container */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background: #ffffff;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: splashSlideUp 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
 
+/* Splash Screen Container */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* White background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: splashSlideUp 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
 
+/* Splash screen logo container */
+#splash-screen .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: splashBounceIn 1.2s ease;
+}
+
+/* Dark green logo icon */
+#splash-screen .splash-svg {
+    width: 80px;
+    height: 80px;
+    fill: #145A32; /* Dark green */
+    margin-bottom: 15px;
+}
+
+/* FertiScan dark green */
+#splash-screen .brand-name {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    color: #145A32; /* Dark green */
+}
+
+/* Light black description text */
+#splash-screen .slogan {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #444444; /* Light black */
+}
+
+/* Animations */
+@keyframes splashSlideUp {
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes splashBounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
