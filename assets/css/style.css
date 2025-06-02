@@ -798,8 +798,6 @@ footer {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease;
-
-
 }
 
 .member-card:hover,
@@ -950,113 +948,95 @@ footer {
 }
 
 .carousel {
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px;
-    height: 300px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .carousel-img {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 /* Splash Screen Container */
 #splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    animation: splashSlideUp 1s ease-in-out forwards;
-    animation-delay: 3s;
-}
-
-/* Splash Screen Container */
-#splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff; /* White background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    animation: splashSlideUp 1s ease-in-out forwards;
-    animation-delay: 3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: splashSlideUp 1s ease-in- ut forwards;
+  animation-delay: 3s;
 }
 
 /* Splash screen logo container */
 #splash-screen .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    animation: splashBounceIn 1.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: splashBounceIn 1.2s ease;
 }
 
 /* Dark green logo icon */
 #splash-screen .splash-svg {
-    width: 80px;
-    height: 80px;
-    fill: #145A32; /* Dark green */
-    margin-bottom: 15px;
+  width: 80px;
+  height: 80px;
+  fill: #145a32; /* Dark green */
+  margin-bottom: 15px;
 }
 
 /* FertiScan dark green */
 #splash-screen .brand-name {
-    font-size: 2.5em;
-    margin: 0;
-    font-weight: bold;
-    color: #145A32; /* Dark green */
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: bold;
+  color: #145a32; /* Dark green */
 }
 
 /* Light black description text */
 #splash-screen .slogan {
-    font-size: 1.1em;
-    margin-top: 10px;
-    color: #444444; /* Light black */
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #444444; /* Light black */
 }
 
 /* Animations */
 @keyframes splashSlideUp {
-    to {
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-    }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes splashBounceIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-
