@@ -10,6 +10,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
+
+<!-- Splash Screen -->
+<div id="splash-screen">
+    <div class="logo">
+        <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="splash-svg">
+                <path d="M12 2L4 7v10l8 5 8-5V7L12 2zm0 2.5L18 8v8l-6 3.5-6-3.5V8l6-3.5z"/>
+                <path d="M12 12l-6-3.5v7l6 3.5 6-3.5v-7L12 12z"/>
+            </svg>
+        </div>
+        <div class="logo-text">
+            <h1 class="brand-name">FertiScan</h1>
+            <p class="slogan">Machine Learning And Mobile App For Sustainable Agriculture</p>
+        </div>
+    </div>
+</div>
+
+
+
+
     <header>
     <div class="nav_bar_container">
         <div class="logo">
@@ -86,7 +106,7 @@
                     <div class="feature-card">
                         <img src="../assets/images/eco-icon.png" alt="Eco Icon">
                         <h3>Sustainable Impact</h3>
-                        <p>Reduces fertilizer overuse by 15% compared to traditional methods.</p>
+                        <p>Reduces fertilizer overuse by  compared to traditional methods.</p>
                     </div>
                 </div>
             </div>
@@ -181,6 +201,11 @@
   setInterval(moveSlide, 3000);
 </script>
 
+<script>
+    setTimeout(() => {
+        document.getElementById("splash-screen").style.display = "none";
+    }, 3500);
+</script>
 
    
 

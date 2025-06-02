@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About the Project | Nitrogen Fertilizer Optimization</title>
 
      <link rel="stylesheet" href="../assets/css/style.css">
@@ -56,137 +56,459 @@
             </div>
         </section>
 
-        <section class="project-overview">
-            <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2>Project Overview</h2>
-                        <p>Our research focuses on developing an accurate, handy, and affordable nitrogen management system for smallholder rice farmers using machine learning for leaf color detection. Nitrogen is one of the principal nutrients for rice farming, involved in many functions like the synthesis of chlorophyll, vegetative growth, photosynthesis, and grain production.</p>
-                        
-                        <p>However, mismanagement of nitrogen fertilizer either in the form of underapplication or overapplication has far-reaching consequences on agriculture and the environment. Nitrogen deficiency causes weak plants and reduced yields, while overapplication causes water pollution, greenhouse gas emission, and high production costs.</p>
-                    </div>
-                    <div class="overview-image">
-                        <img src="assets/images/research/rice-field-closeup.jpg" alt="Rice field closeup">
-                    </div>
-                </div>
+      <section class="project-overview" style="background: #f9fbe7; padding: 2.5rem 0">
+        <div class="container">
+          <div
+            class="overview-content"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 2rem;
+            "
+          >
+            <div class="overview-text" style="flex: 1 1 350px">
+              <h2 style="color: #388e3c; text-align: center">Project Overview</h2>
+              <p style="text-align: center; color: #666; font-weight: 500;">
+               Our research at the University of Sri Jayewardenepura focuses on developing an accurate, handy, and affordable nitrogen management system for smallholder rice farmers using machine learning for leaf color detection. Nitrogen is one of the principal nutrients for rice farming, involved in many functions like the synthesis of chlorophyll, vegetative growth, photosynthesis, and grain production.
+              </p>
+      
+              <p style="text-align: center; color: #666; font-weight: 500;">
+                Our mobile app uses AI to analyze rice leaves, achieving 98% accuracy in detecting nitrogen levels. It provides instant, tailored fertilizer recommendations, works offline on low-cost smartphones, and helps farmers boost yields while protecting the environment.
+              </p>
             </div>
-        </section>
+      
+            <div
+              class="header-images-slider"
+              style="
+                flex: 1 1 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <div class="slider">
+                <img
+                  src="../assets/images/about/Paddy.jpg"
+                  alt="Drone view"
+                  class="slide-image"
+                />
+                <img
+                  src="../assets/images/about/Rice_farmer_in_field.jpg"
+                  alt="Rice leaf closeup"
+                  class="slide-image"
+                />
+                <img
+                  src="../assets/images/about/Rice_field_closeup.jpg"
+                  alt="Rice farmer in field"
+                  class="slide-image"
+                />
+      
+                <button class="prev-slide" aria-label="Previous slide">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M13 16L7 10L13 4"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="next-slide" aria-label="Next slide">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M7 4L13 10L7 16"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+      
+              <div
+                class="slider-dots"
+                style="margin-top: 1rem; display: flex; gap: 0.5rem"
+              >
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+      
+          <style>
+            .slider {
+              position: relative;
+              width: 460px;
+              height: 360px;
+            }
+      
+            .slide-image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 1rem;
+              box-shadow: 0 2px 12px rgba(56, 142, 60, 0.08);
+              opacity: 0;
+              transition: opacity 0.5s;
+            }
+      
+            .slide-image:first-child {
+              opacity: 1;
+            }
+      
+           
+            .slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(106, 216, 111, 0.85);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
 
-        <section class="problem-solution">
-            <div class="container">
-                <h2>The Problem & Our Solution</h2>
-                <div class="ps-grid">
-                    <div class="problem-card">
-                        <h3>The Challenge</h3>
-                        <ul>
-                            <li>Farmers traditionally depend on tools like the Leaf Color Chart (LCC) which are susceptible to human error and inconsistency</li>
-                            <li>Precision solutions like SPAD meters are too expensive for smallholder farmers</li>
-                            <li>Existing digital methods fail to account for technical variability in real-world conditions</li>
-                            <li>Poor nitrogen management affects regional food production and environmental quality</li>
-                        </ul>
-                    </div>
-                    <div class="solution-card">
-                        <h3>Our Innovation</h3>
-                        <ul>
-                            <li>Mobile application based on machine learning for nitrogen deficiency detection</li>
-                            <li>Pre-optimized DenseNet121 CNN model with 98% classification accuracy</li>
-                            <li>Robust image preprocessing pipeline for varying lighting conditions</li>
-                            <li>Cross-platform Flutter app optimized for low-end smartphones</li>
-                            <li>Real-time results with specific fertilizer recommendations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+/* Move buttons slightly inward */
+.slider button.prev-slide {
+  left: 10px; /* Adjust this to add padding from the left */
+}
 
-        <section class="project-scope">
-            <div class="container">
-                <h2>Project Scope</h2>
-                <div class="scope-content">
-                    <div class="scope-image">
-                        <img src="assets/images/research/scope-infographic.png" alt="Project scope infographic">
-                    </div>
-                    <div class="scope-text">
-                        <h3>Focused Implementation</h3>
-                        <p>The research is exclusively on rice cultivation with particular emphasis on widely cultivated varieties in Sri Lanka. The intended user group is small-scale farmers who generally cultivate less than two hectares of land.</p>
-                        
-                        <h3>Technical Specifications</h3>
-                        <ul>
-                            <li>Input: Images of leaves captured using regular smartphone cameras</li>
-                            <li>Processing: Works on both high-end and low-cost mobile phones</li>
-                            <li>Output: Nitrogen deficiency class and precise fertilizer recommendations</li>
-                            <li>Recommendations based on plant growth stage and local soil types</li>
-                        </ul>
-                        
-                        <h3>Future Potential</h3>
-                        <p>While currently focused on nitrogen management, the design allows for easy future expansion to other nutrient deficiencies.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+.slider button.next-slide {
+  right: 10px; /* Adjust this to add padding from the right */
+}
 
-        <section class="objectives">
-            <div class="container">
-                <h2>Research Objectives</h2>
-                <div class="objectives-grid">
-                    <div class="objective-card">
-                        <div class="objective-icon">
-                            <img src="assets/images/icons/accuracy-icon.svg" alt="Accuracy icon">
-                        </div>
-                        <h3>Technical Objective 1</h3>
-                        <p>Construction of a high-precision CNN model that can classify leaf images into four nitrogen status categories at over 95% accuracy.</p>
-                    </div>
-                    
-                    <div class="objective-card">
-                        <div class="objective-icon">
-                            <img src="assets/images/icons/recommendation-icon.svg" alt="Recommendation icon">
-                        </div>
-                        <h3>Technical Objective 2</h3>
-                        <p>Creation of an intelligent recommendation system that interprets classification outcomes into usable fertilizer recommendations.</p>
-                    </div>
-                    
-                    <div class="objective-card">
-                        <div class="objective-icon">
-                            <img src="assets/images/icons/mobile-icon.svg" alt="Mobile icon">
-                        </div>
-                        <h3>Technical Objective 3</h3>
-                        <p>Development of an intuitive mobile app that is performance-optimized for low-end smartphones common in target user groups.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      
+            .slider:hover button {
+              opacity: 1;
+              pointer-events: all;
+            }
+      
+            .slider button.prev-slide {
+              left: -40px;
+            }
+      
+            .slider button.next-slide {
+              right: -40px;
+            }
+      
+            .slider button:hover {
+              background: rgba(56, 142, 60, 1);
+              transform: translateY(-50%) scale(1.1);
+            }
+      
+            .slider-dots .dot {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: #388e3c;
+              display: inline-block;
+              cursor: pointer;
+              opacity: 0.4;
+              transition: opacity 0.3s;
+            }
+      
+            .slider-dots .dot.active {
+              opacity: 1;
+            }
+          </style>
+      
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const slides = document.querySelectorAll(".slide-image");
+              const dots = document.querySelectorAll(".slider-dots .dot");
+              const prevBtn = document.querySelector(".prev-slide");
+              const nextBtn = document.querySelector(".next-slide");
+              let current = 0;
+      
+              function showSlide(idx) {
+                slides.forEach((img, i) => {
+                  img.style.opacity = i === idx ? "1" : "0";
+                });
+                dots.forEach((dot, i) => {
+                  dot.classList.toggle("active", i === idx);
+                });
+                current = idx;
+              }
+      
+              prevBtn.addEventListener("click", () => {
+                let idx = (current - 1 + slides.length) % slides.length;
+                showSlide(idx);
+              });
+      
+              nextBtn.addEventListener("click", () => {
+                let idx = (current + 1) % slides.length;
+                showSlide(idx);
+              });
+      
+              dots.forEach((dot, i) => {
+                dot.addEventListener("click", () => showSlide(i));
+              });
+      
+              showSlide(0);
+            });
+          </script>
+        </div>
+      </section>
+      
 
-        <section class="significance">
-            <div class="container">
-                <h2>Significance of the Research</h2>
-                <div class="significance-content">
-                    <div class="significance-card">
-                        <h3>Theoretical Contribution</h3>
-                        <p>Adds to the body of literature on uses of machine learning in agriculture in real-world settings, specifically on tackling problems of variability in field conditions.</p>
-                    </div>
-                    
-                    <div class="significance-card">
-                        <h3>Practical Impact</h3>
-                        <p>Demonstrates implementation of high-level technology into resource-constrained situations, serving as a model for other agricultural applications.</p>
-                    </div>
-                    
-                    <div class="significance-card">
-                        <h3>Social Benefits</h3>
-                        <p>Helps bridge the precision agriculture divide between smallholder and large-scale commercial farmers.</p>
-                    </div>
-                    
-                    <div class="significance-card">
-                        <h3>Environmental Benefits</h3>
-                        <p>Widespread adoption could lead to reduced fertilizer runoff and associated pollution.</p>
-                    </div>
-                    
-                    <div class="significance-card">
-                        <h3>Economic Benefits</h3>
-                        <p>Improves farm-level profitability by increasing efficiency of input utilization while providing affordable accessibility.</p>
-                    </div>
+      <section class="problem-solution" style="padding: 2.5rem 0">
+        <div class="container">
+          <h2 style="color: #09473a; text-align: center">
+            Problems & Our Solutions
+          </h2>
+          <div
+            class="ps-grid"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+              justify-content: center;
+              margin-top: 2rem;
+            "
+          >
+            <div style="background: #fff3e0; border-radius: 0.8rem; box-shadow: 0 2px 8px rgba(255, 167, 38, 0.1); padding: 1.5rem; flex: 1 1 300px; min-width: 260px;">
+              <h3 style="color: #e65100; font-size: 1.2rem;">Problems</h3>
+              <ul style="padding-left: 1.2rem">
+                 <p style="color: #333; line-height: 1.6;">Mismanagement of nitrogen fertilizer, either in the form of underapplication or overapplication, has far-reaching consequences on agriculture and the environment. Nitrogen deficiency causes weak plants and reduced yields, while overapplication causes water pollution, greenhouse gas emissions, and high production costs.
+
+</p>
+                <li>
+                 Leaf Color Charts are subjective and error-prone.
+                </li>
+                <li>
+                 Advanced tools like SPAD meters are too expensive.
+                </li>
+                <li> Existing digital methods fail to account for technical
+                  variability in real-world conditions.</li>
+                 
+                </li>
+                <li>
+                Poor nitrogen use harms food security and ecosystems.
+                </li>
+              </ul>
+            </div>
+            <div style="background: #e0f7fa; border-radius: 0.8rem; box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1); padding: 1.5rem; flex: 1 1 300px; min-width: 260px;">
+              <h3 style="color: #006064; font-size: 1.2rem;">Our Solutions</h3>
+             <ul style="padding-left: 1.2rem; color: #333; line-height: 1.6;">
+                <li><strong>AI-Powered App:</strong> Uses DenseNet121 model for 98% accurate nitrogen detection.</li>
+                            <li><strong>Accessible:</strong> Runs offline on low-end smartphones.</li>
+                            <li><strong>Practical:</strong> Gives real-time fertilizer advice tailored to local conditions.</li>
+                            <li><strong>Sustainable:</strong> Reduces fertilizer waste, cutting costs and pollution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="project-scope"
+        style="
+          background: url('../assets/images/about/scopebg.jpg') center
+              center/cover no-repeat,
+            #f1f8e9;
+          padding: 2.5rem 0;
+        "
+      >
+        <div
+          class="container"
+          style="
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 1rem;
+            padding: 2rem;
+          "
+        >
+          <h2 style="color: #0c6955; text-align: center; font-size: 1.6rem; margin-bottom: 1rem;">Project Scope</h2>
+                <div style="max-width: 800px; margin: 0 auto; color: #333; line-height: 1.6;">
+                    <p><strong>Target Users:</strong> Smallholder rice farmers in Sri Lanka, managing less than two hectares of land, growing common rice varieties.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Technology:</strong> A mobile app that analyzes leaf photos from any smartphone camera, delivering nitrogen deficiency results and fertilizer recommendations in seconds.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Future Vision:</strong> Built to expand for detecting other nutrient deficiencies, supporting broader crop health solutions.</p>
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="objectives" style="padding: 2.5rem 0">
+        <div class="container">
+          <h2 style="color: #09473a; text-align: center">
+            Research Objectives
+          </h2>
+          <div
+            class="objectives-grid"
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+              justify-content: center;
+              margin-top: 2rem;
+            "
+          >
+            <div
+              class="objective-card inset-0 z-50"
+              style="
+                background: center center/cover no-repeat, #e7ebd8;
+                padding: 2rem;
+                flex: 1 1 220px;
+                min-width: 200px;
+                text-align: center;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+                border-radius: 1rem;
+              "
+            ><div style="position: relative; z-index: 1">
+              
+                        <h3 style="color: #388e3c; font-size: 1.2rem;">Develop Accurate AI</h3>
+                        <p style="color: #333;">Create an AI model to classify nitrogen levels in rice leaves with over 95% accuracy.</p>
+              </div>      
+            </div>
+            <div
+              class="objective-card inset-0 z-50"
+              style="
+                background: center center/cover no-repeat, #c1ce9d;
+                padding: 2rem;
+                flex: 1 1 220px;
+                min-width: 200px;
+                text-align: center;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+                border-radius: 1rem;
+              "
+            >
+            <div style="position: relative; z-index: 1">
+             <h3 style="color: #388e3c; font-size: 1.2rem;">Provide Smart Advice</h3>
+                        <p style="color: #333;">Offer farmers clear, location-specific fertilizer recommendations.</p>
+            </div></div>
+            <div
+              class="objective-card inset-0 z-50"
+              style="
+                background: center center/cover no-repeat, #a3b66f;
+                padding: 2rem;
+                flex: 1 1 220px;
+                min-width: 200px;
+                text-align: center;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+                border-radius: 1rem;
+              "
+            >
+              <div style="position: relative; z-index: 1">
+                <h3 style="color: #388e3c; font-size: 1.2rem;">Ensure Accessibility</h3>
+                        <p style="color: #333;">Build an app that works on affordable smartphones, even offline.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="significance" style="background: #e8f5e9 url('../assets/images/about/Why_Our_Research_Matters_bg.jpg') no-repeat center center/cover; padding: 2rem 0; position: relative;">
+    <div class="container" style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="color: #09473a; text-align: center; font-size: 1.8rem; margin-bottom: 1.5rem; opacity: 0; animation: fadeIn 0.8s ease-out forwards;">Why Our Research Matters</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+            <div style="background: #ffffff; border-radius: 0.8rem; box-shadow: 0 4px 12px rgba(56, 142, 60, 0.15); padding: 1.5rem; flex: 1 1 280px; min-width: 260px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; animation: slideUpFade 0.8s ease-out 0.2s forwards;">
+                <div class="card-content">
+                    <i class="fas fa-coins" aria-label="Economic prosperity icon" style="color: #388e3c; font-size: 2rem; margin-bottom: 0.5rem; display: inline-block; animation: rotateGlow 1s ease-in-out;"></i>
+                    <h3 style="color: #388e3c; font-size: 1.3rem;">Economic Prosperity</h3>
+                    <p style="color: #333; line-height: 1.5;">
+                        Our app cuts fertilizer use by 15% in field tests, saving farmers money while growing more rice. This means higher profits for smallholder families, putting more cash in their pockets.
+                    </p>
                 </div>
             </div>
-        </section>
+            <div style="background: #ffffff; border-radius: 0.8rem; box-shadow: 0 4px 12px rgba(56, 142, 60, 0.15); padding: 1.5rem; flex: 1 1 280px; min-width: 260px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; animation: slideUpFade 0.8s ease-out 0.4s forwards;">
+                <div class="card-content">
+                    <i class="fas fa-leaf" aria-label="Environmental health icon" style="color: #388e3c; font-size: 2rem; margin-bottom: 0.5rem; display: inline-block; animation: rotateGlow 1s ease-in-out;"></i>
+                    <h3 style="color: #388e3c; font-size: 1.3rem;">Environmental Health</h3>
+                    <p style="color: #333; line-height: 1.5;">
+                        Our app reduces fertilizer runoff by 20% in trials, keeping rivers clean and cutting emissions. This protects water for communities and builds a greener future.
+                    </p>
+                </div>
+            </div>
+            <div style="background: #ffffff; border-radius: 0.8rem; box-shadow: 0 4px 12px rgba(56, 142, 60, 0.15); padding: 1.5rem; flex: 1 1 280px; min-width: 260px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; animation: slideUpFade 0.8s ease-out 0.6s forwards;">
+                <div class="card-content">
+                    <i class="fas fa-hands-helping" aria-label="Social good icon" style="color: #388e3c; font-size: 2rem; margin-bottom: 0.5rem; display: inline-block; animation: rotateGlow 1s ease-in-out;"></i>
+                    <h3 style="color: #388e3c; font-size: 1.3rem;">Social Good</h3>
+                    <p style="color: #333; line-height: 1.5;">
+                        Tested with 50 farmers, our affordable app empowers smallholders with smart tools. It also pioneers AI for farming, inspiring solutions worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); box-shadow: 0 0 0 rgba(56, 142, 60, 0); }
+            50% { transform: rotate(180deg); box-shadow: 0 0 10px rgba(56, 142, 60, 0.8); }
+            100% { transform: rotate(360deg); box-shadow: 0 0 0 rgba(56, 142, 60, 0); }
+        }
+        /* Card Hover Effect */
+        .significance div:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(56, 142, 60, 0.25);
+        }
+        /* Post-Animation Padding */
+        .card-content {
+            padding: 0; /* Initial padding before animation */
+            transition: padding 0.3s ease-in-out;
+        }
+        .animated-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 0rem; /* Adjusted to 0 to avoid overlap */
+        }
+        /* Apply padding after animation */
+        .significance div[animation-finished] .card-content {
+            padding-left: 0rem;
+            padding-right: 0rem;
+            padding-bottom: 0rem;
+        }
+        /* Reduced Motion for Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .significance h2, .significance div, .significance i, .card-content {
+                animation: none;
+                transition: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    </style>
+    <script>
+        // Add 'animation-finished' attribute after slideUpFade completes
+        document.querySelectorAll('.significance div').forEach((card, index) => {
+            setTimeout(() => {
+                card.setAttribute('animation-finished', '');
+            }, (200 + index * 200) + 800); // Delay (0.2s, 0.4s, 0.6s) + animation duration (0.8s)
+        });
+    </script>
+</section>
     </main>
 
     <footer>
@@ -257,3 +579,5 @@
         <script src="../assets/js/animations.js"></script>
 </body>
 </html>
+
+
