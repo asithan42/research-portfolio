@@ -166,15 +166,22 @@
                 </div>
             </div>
         </section>
-
-        <section class="system-architecture">
-            <div class="container">
-                <h2>System Architecture</h2>
-                <div class="architecture-image">
-                    <img src="../assets/images/research/system-architecture.png" alt="System Architecture Diagram">
-                </div>
-                
-                <div class="architecture-details">
+    <section class="architecture-carousel">
+    <h1>Architecture Diagrams</h1>
+    <div class="carousel-container">
+        <div class="diagram-carousel">
+            <img src="../assets/images/diagrems/codebase.png" alt="Codebase Diagram">
+            <img src="../assets/images/diagrems/sequence.png" alt="Sequence Diagram">
+            <img src="../assets/images/diagrems/uml_diagrem.png" alt="UML Diagram">
+            <img src="../assets/images/diagrems/usecase_diagrem.png" alt="Use Case Diagram">
+        </div>
+        <button class="carousel-btn prev-btn">&lt;</button>
+        <button class="carousel-btn next-btn">&gt;</button>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+        <section >
+                  <div class="architecture-details">
                     <div class="detail-card">
                         <h3>Mobile Application</h3>
                         <p>Built with Flutter framework for cross-platform compatibility and performance on low-end devices. Guides users through image capture and displays results with fertilizer recommendations.</p>
@@ -263,6 +270,105 @@
 
     <script src="../assets/js/main.js"></script>
      <script src="../assets/js/animations.js"></script>
+     
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.diagram-carousel');
+    const images = document.querySelectorAll('.diagram-carousel img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    const totalImages = images.length;
+    
+    // Create dots
+    for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateCarousel();
+    }
+    
+    // Button events
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // Auto-rotate (optional)
+    let autoSlide = setInterval(nextSlide, 5000);
+    
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextSlide, 5000);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Touch events for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide(); // Swipe left
+        }
+        if (touchEndX > touchStartX + 50) {
+            prevSlide(); // Swipe right
+        }
+    }
+});
+</script>
      
 </body>
 </html>

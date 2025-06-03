@@ -1048,3 +1048,95 @@ footer {
     transform: scale(1);
   }
 }
+
+
+
+.architecture-carousel {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.architecture-carousel h1 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.diagram-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 500px; /* Adjust based on your needs */
+}
+
+.diagram-carousel img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .diagram-carousel {
+        height: 350px;
+    }
+    
+    .carousel-btn {
+        padding: 10px;
+    }
+}
