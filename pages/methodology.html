@@ -68,7 +68,9 @@
                     <div class="phase-card">
                         <div class="phase-number">2</div>
                         <h3>Fertilizer Recommendation System</h3>
-                        <p>This module converted CNN class outputs to nitrogen application recommendations, incorporating agronomic parameters like plant growth stage and local soil type for site-specific advice.</p>
+                        <p>This module converts the output of the CNN classification model into nitrogen application recommendations. Based on the predicted crop condition, it advises farmers on the appropriate amount of nitrogen to apply to their fields.
+
+</p>
                     </div>
                     
                     <div class="phase-card">
@@ -85,37 +87,38 @@
                 <h2>Technology Stack</h2>
                 <div class="tech-grid">
                     <div class="tech-card">
-                        <img src="../assets/images/icons/python-icon.svg" alt="Python">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python">
                         <h3>Python</h3>
                         <p>Primary programming language for model construction due to its mature ecosystem for machine learning libraries.</p>
                     </div>
                     
                     <div class="tech-card">
-                        <img src="../assets/images/icons/opencv-icon.svg" alt="OpenCV">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10328/10328698.png" alt="OpenCV">
                         <h3>OpenCV</h3>
                         <p>Used for image preprocessing operations like Contrast Limited Adaptive Histogram Equalization (CLAHE) in LAB color space.</p>
                     </div>
                     
                     <div class="tech-card">
-                        <img src="../assets/images/icons/densenet-icon.svg" alt="DenseNet">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2103/2103675.png" alt="DenseNet">
                         <h3>DenseNet121</h3>
                         <p>CNN architecture selected for its compactness, feature reuse, and strong performance with relatively small datasets.</p>
                     </div>
                     
                     <div class="tech-card">
-                        <img src="../assets/images/icons/flutter-icon.svg" alt="Flutter">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAkFBMVEX///9AxP8BV5sDqfQISZTU8f+h3v/J2ugVvf8AOo43wv8ApvQAp/MAT5crwP/f9P/q+P9tz/+B1f/2/P+L2P930v/J7P9RyP9hzP+o4f8os/cAQZHs8vcAM4sRhs0ARJLe5e8LO4hadqwmY6G/0OJ6lb265/8AofOk2PksrvVbvPcdkdNoh7Vwjbg2aqWAnMEfSgokAAAEiElEQVR4nO3ciVriMBQFYKAtYqGL1mFxKTiL4jjL+7/dUJSxhSTNzZc2h2vOAzj95yb31HUw8PHx8fHx8fHpOHlETu76mWWZxxNqrlEx82E8pCW+KVw/tCQmFti5xIws5LmksJanBdUygb0vnCxzsiXFtZDvC/BcyHuM01xwuzL61P3iLX3EZCfzsQDvZAMLp7mgWiJGFpN3ftT7EjHayQa9D/u1C4O5eEsP4bSTDSzXqHvMxII6F4OuZGRJcS303mdkwe39jFPvc7KQ7z6uxeDzfW/pIfMlHwunrsw4WRj1Pt2Cu5MNev+Lt3Qfgz2Ga+HUL3SLn0sP4WQx6H3YM8bKQu99WEvOqCs5zYXTffnkXcnKkrl+aEkyThaDu49qyemWK9T7kjPqF4Peh52LQe/jWuh7zFt6SHTFZydzsrDqfYP7gmox6X1YC6N+KQwssHOhf08c1sKpKzntsYzelZws0q4snsbUrGyeV6u9vyJ+qN0OXVn84c3c5n1ZUT+xi+OVPcqgoPf+Um6ZED/WMB1btOTDlPjPx0vpGadb7M6F3vs252LVki/oc5HusRX5/yW2ecYM9pjCQvxQti30flFZqHtsaPOM0THynezcQtZYttj+RYd8SVgAqq4kW2LrFtJqttn7dndyTaM5G9zer2v0XmfsdmVHFs0XTZWF2rsdWrR2Gm7v0zVWu7JbS6sGuPfJmvQqsmnp/pcCFa+ccotBV/ZhUXwyYNXSRe+LInkXSJdSy/aFRul2J2toYrllPJ3d0ixd9b4ogi83xwtpV46fgyAgafq0CLaAwrKtLAFlNv1aTjRyS7GdzgKaJr7plTI4+gatoiu3L28WbU3nvS9KTSPfYzWLpsaJpXbSlJZpEFA08XDs5o8BvGsUXVmfi5bGmeX9B+eUXdm0aGicWfbfdlZ05WGPNaLUuLkvh+TDhfx9TGRRzibtfSc3U6h7XxSpxrVFnu2zaC6q2cBaiu1MZpFp+u99zRSne6xF46grNdJiEWh2FtA/nHPU+xoah13Zlra5CDRnbWlqYM+YuPdF+a/B/eOy4t5XzQa2XwiWw2wmPCz72cDOpdgGFEulge39QfazrV9ONK8b1w8tzfyWqCkvv25cP7Q0RE0Zhg/ImtY3mbolCcMQeTZRoK3ZzaXKHbAm09W8W7A1mrMp1yEbTfkYfgT63rRvgYYFfKfdtrwJHFnOWlOGJ8HWKE6awHK2mn1XnplGtgUkljC5+7Vx/dDSRDOhRmxJktFolPy+d/3Q0gj7RnhfKslor9m4fmhp5qeaWu8fS0bgsznRnPRLXVIlRNY0t8Dro1JS5Q5ZU2/PxhlLRJRd1sCapw9N2S7B10ybOzlRSeBP2tu9ebO0SvaaH8CaaqeVyVp5uBqB3mnBdDcXXUmVBHg2UUmigGsuRkQMM02IrPlG1SBv6O9/qJo18GzoGuS+MdAgnzTyvYE+aZ98Q3tNX+F10ugaZu8CwBr6hobW8HoXoM/mLyfNGlmj/fWAQ3htaF6aEfRJe7ik5QH4u1H3F+TgjsbHx8fHx8cHIv8AtgKUP9+76usAAAAASUVORK5CYII=" alt="Flutter">
                         <h3>Flutter</h3>
                         <p>Framework for cross-platform mobile app development, enabling a single codebase for both Android and iOS.</p>
                     </div>
                     
-                    <div class="tech-card">
-                        <img src="../assets/images/icons/tensorflow-icon.svg" alt="TensorFlow">
-                        <h3>TensorFlow Lite</h3>
-                        <p>Used for mobile deployment of the trained model, optimizing for size and computational overhead.</p>
-                    </div>
+             <div class="tech-card">
+    <img src="data:image/png;base64,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" alt="Google Colab">
+    <h3>Google Colab</h3>
+    <p>Cloud-based platform used for model training and experimentation, offering free GPU resources and seamless notebook sharing.</p>
+</div>
+
                     
                     <div class="tech-card">
-                        <img src="../assets/images/icons/flask-icon.svg" alt="Flask">
+                        <img src="data:image/png;base64,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" alt="Flask">
                         <h3>Flask</h3>
                         <p>Lightweight Python web framework used for backend services before transitioning to fully on-device processing.</p>
                     </div>
@@ -132,11 +135,10 @@
                         <p>Data were collected on-site in Sri Lanka's Western Province rice-growing regions, selected for their representative smallholder operations and varied agroecological settings. The sampling strategy used a stratified design to ensure wide coverage across soil types, rice varieties, and growth stages.</p>
                         
                         <h3>Image Dataset</h3>
-                        <p>During two growing seasons, researchers collaborated with local growers to obtain 1,082 leaf images with standardized parameters:</p>
+                        <p>During two growing seasons, researchers collaborated with local growers to obtain 1,000 leaf images with standardized parameters:</p>
                         <ul>
                             <li>Photos taken mid-morning to avoid harsh midday sun</li>
                             <li>Leaves photographed against neutral gray background</li>
-                            <li>Metadata on growth stage, soil moisture, and weather conditions</li>
                             <li>Comprehensive range of nitrogen statuses under different conditions</li>
                         </ul>
                         
@@ -149,21 +151,37 @@
                             <li>Resizing to 224×224 pixels for model input</li>
                         </ul>
                     </div>
-                    <div class="data-image">
-                        <img src="../assets/images/research/data-collection.jpg" alt="Data collection in rice fields">
-                        <div class="image-caption">Field data collection with participating farmers</div>
-                    </div>
+                    <div class="hero-image carousel">
+            <div class="carousel-track">
+                <img src="../assets/images/research/data collection/6.jpg" class="carousel-img" alt="Slide 1">
+           <img src="../assets/images/research/data collection/1.jpg" class="carousel-img" alt="Slide 2">
+          <img src="../assets/images/research/data collection/2.jpg" class="carousel-img" alt="Slide 3">
+         <img src="../assets/images/research/data collection/3.jpg"class="carousel-img" alt="Slide 1">
+              <img src="../assets/images/research/data collection/4.jpg"class="carousel-img" alt="Slide 2">
+          <img src="../assets/images/research/data collection/5.jpg" class="carousel-img" alt="Slide 3">
+               <img src="../assets/images/research/data collection/7.jpg" class="carousel-img" alt="Slide 3">
+                    <img src="../assets/images/research/data collection/8.jpg" class="carousel-img" alt="Slide 3">
+            </div>
+        </div>
                 </div>
             </div>
         </section>
-
-        <section class="system-architecture">
-            <div class="container">
-                <h2>System Architecture</h2>
-                <div class="architecture-image">
-                    <img src="../assets/images/research/system-architecture.png" alt="System Architecture Diagram">
-                </div>
-                <div class="architecture-details">
+    <section class="architecture-carousel">
+    <h1>Architecture Diagrams</h1>
+    <div class="carousel-container">
+        <div class="diagram-carousel">
+            <img src="../assets/images/diagrems/codebase.png" alt="Codebase Diagram">
+            <img src="../assets/images/diagrems/sequence.png" alt="Sequence Diagram">
+            <img src="../assets/images/diagrems/uml_diagrem.png" alt="UML Diagram">
+            <img src="../assets/images/diagrems/usecase_diagrem.png" alt="Use Case Diagram">
+        </div>
+        <button class="carousel-btn prev-btn">&lt;</button>
+        <button class="carousel-btn next-btn">&gt;</button>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+        <section >
+                  <div class="architecture-details">
                     <div class="detail-card">
                         <h3>Mobile Application</h3>
                         <p>Built with Flutter framework for cross-platform compatibility and performance on low-end devices. Guides users through image capture and displays results with fertilizer recommendations.</p>
@@ -177,9 +195,10 @@
                         <p>Fine-tuned DenseNet121 CNN performs the core classification task, trained on thousands of labeled rice leaf images across different conditions.</p>
                     </div>
                     <div class="detail-card">
-                        <h3>Recommendation Engine</h3>
-                        <p>Converts classification results into practical fertilizer application rates considering local soil conditions and growth stages, developed with agronomy experts.</p>
-                    </div>
+    <h3>Recommendation Engine</h3>
+    <p>Based on the predicted rice leaf color, it advises farmers on the appropriate amount of nitrogen to apply to their fields.</p>
+</div>
+
                 </div>
             </div>
         </section>
@@ -250,5 +269,106 @@
 
 
     <script src="../assets/js/main.js"></script>
+     <script src="../assets/js/animations.js"></script>
+     
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.diagram-carousel');
+    const images = document.querySelectorAll('.diagram-carousel img');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    const totalImages = images.length;
+    
+    // Create dots
+    for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateCarousel();
+    }
+    
+    // Button events
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // Auto-rotate (optional)
+    let autoSlide = setInterval(nextSlide, 5000);
+    
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextSlide, 5000);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Touch events for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide(); // Swipe left
+        }
+        if (touchEndX > touchStartX + 50) {
+            prevSlide(); // Swipe right
+        }
+    }
+});
+</script>
+     
 </body>
 </html>

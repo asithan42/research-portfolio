@@ -102,3 +102,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+// Carousel functionality
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-img');
+  const slideWidth = slides[0].clientWidth;
+  let index = 0;
+
+  function moveSlide() {
+    index++;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    if (index === slides.length - 2) { // near end, reset soon
+      setTimeout(() => {
+        track.style.transition = 'none';
+        index = 0;
+        track.style.transform = `translateX(0px)`;
+      }, 600); // wait for animation to finish
+    }
+  }
+
+  setInterval(moveSlide, 3000);
+
+

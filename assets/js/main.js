@@ -70,3 +70,5 @@ window.addEventListener('scroll', function () {
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll
 });
+
+
