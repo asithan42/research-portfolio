@@ -781,6 +781,13 @@ footer {
 .conclusion-image {
   flex: 1;
 }
+.field-image img {
+    width: 100%;
+    max-width: 600px; /* Adjust to make image smaller */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image (optional) */
+}
 
 /* Team Page Styles */
 .members-grid,
@@ -949,27 +956,28 @@ footer {
   overflow: hidden;
 }
 
-.carousel {
-    overflow: hidden;
+.hero-image.carousel {
     width: 100%;
-    max-width: 600px;
-    height: 300px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    height: auto;
+    overflow: hidden; /* Optional: remove if you want to allow full image scroll */
     position: relative;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
     width: 100%;
+    height: auto;
 }
 
 .carousel-img {
     width: 100%;
+    max-height: 500px; /* Adjust this to your preferred height */
+    object-fit: contain;
     flex-shrink: 0;
-    object-fit: cover;
 }
+
+
+
 
 /* Splash Screen Container */
 #splash-screen {
